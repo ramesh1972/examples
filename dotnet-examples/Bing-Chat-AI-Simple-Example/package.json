@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "dependencies": {
+    "bing-chat": "^0.2.3"
+  }
+}

@@ -1,0 +1,6 @@
+@booksService_HostAddress = http://localhost:5111
+
+GET {{booksService_HostAddress}}/books
+Accept: application/json
+
+###
