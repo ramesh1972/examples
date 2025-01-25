@@ -18,7 +18,7 @@
 </div>
 <style>
 	.footer{
-		background-color: #aaa;
+		background-color: #ddd;
 		font-size: 18px;
 		font-weight: bold;
 		text-align: center;

@@ -8,12 +8,18 @@ import UserTile from './UserTile';
 const AboutComponent = React.lazy(() => import('sharedMFE/AboutComponent'));
 const Dashboard = React.lazy(() => import('dashboard/Dashboard'));
 const UserManagement = React.lazy(() => import('userManagement/UserManagement'));
+const Header = React.lazy(() => import('header/Header'));
 import Footer from "./modules/Footer";
 import('sharedMFE/commonStyles');
 
 const App = () => (
-  <div className='common-container'>
-    <div className='common-style'>Host MFE Application</div>
+  <div className='common-container' style={{ backgroundColor: 'aqua' }}>
+    <div className='common-style'>Host MFE App</div>
+     <Suspense fallback={<div>Loading Header...</div>} >
+     <div style={{margin: '10px'}}>
+      <Header/>
+      </div>
+    </Suspense>
     <div className="container">
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
@@ -67,7 +73,9 @@ const App = () => (
         </Suspense>
       </Router>
     </div>
+    <div style={{margin: '10px'}}>
     <Footer />
+    </div>
   </div>
 );
 

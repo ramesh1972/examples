@@ -1,5 +1,6 @@
-const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+// webpack.config.js (Header Micro Frontend)
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 const webpack = require('webpack');
 
@@ -22,7 +23,7 @@ module.exports = {
   mode: process.env.NODE_ENV || 'development',
   entry: './src/index.js',
   output: {
-    publicPath: env.HOST_URL || 'http://localhost:8085/',
+    publicPath: env.HEADER_URL || 'http://localhost:8082/'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -44,12 +45,7 @@ module.exports = {
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: ['style-loader', 'css-loader'],
-      },
+      }
     ],
   },
   plugins: [
@@ -59,13 +55,13 @@ module.exports = {
     new NodePolyfillPlugin(), // Add polyfills for Node.js modules
 
     new ModuleFederationPlugin({
-      name: 'host',
+      name: 'header', // Change to `header` or `userManagement` for respective configs
+      filename: "remoteEntry.js",
+      exposes: {
+        './Header': './src/Header', // Expose the App component
+      },
       remotes: {
-        dashboard: `dashboard@${env.DASHBOARD_URL}remoteEntry.js`,
-        userManagement: `userManagement@${env.USER_MANAGEMENT_URL}remoteEntry.js`,
         sharedMFE: `sharedMFE@${env.SHARED_MFE_URL}remoteEntry.js`,
-        footer: `footer@${env.FOOTER_URL}remoteEntry.js`,
-        header: `header@${env.HEADER_URL}remoteEntry.js`,
       },
       shared: {
         react: {
@@ -77,7 +73,7 @@ module.exports = {
           singleton: true, // Ensure a single instance of ReactDOM
           requiredVersion: '^18.0.0',
           eager: true
-        }
+        },
       },
     }),
     new HtmlWebpackPlugin({
@@ -85,7 +81,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: env.MY_PORT || 8085,
+    port: env.MY_PORT || 8082,
     historyApiFallback: true,
   },
 };

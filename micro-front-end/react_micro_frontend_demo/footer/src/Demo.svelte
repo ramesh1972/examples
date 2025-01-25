@@ -43,7 +43,15 @@
 
 <div class="container">
   <p class="title">1) Demo of MFE host application & contained MFE applications</p>
-
+ <ul class="list">
+    <li>HOST_URL: <a href="http://mfe-poc.rameshv.me:8085/" target="_blank">http://mfe-poc.rameshv.me:8085/</a></li>
+    <li>SHARED_MFE_URL: <a href="http://mfe-poc.rameshv.me:8083/" target="_blank">http://mfe-poc.rameshv.me:8083/</a></li>
+    <li>DASHBOARD_URL: <a href="http://mfe-poc.rameshv.me:8089/" target="_blank">http://mfe-poc.rameshv.me:8089/</a></li>
+    <li>USER_MANAGEMENT_URL: <a href="http://mfe-poc.rameshv.me:8087/" target="_blank">http://mfe-poc.rameshv.me:8087/</a></li>
+    <li>FOOTER_URL: <a href="http://mfe-poc.rameshv.me:8081/" target="_blank">http://mfe-poc.rameshv.me:8081/</a></li>
+    <li>HEADER_URL: <a href="http://mfe-poc.rameshv.me:8082/" target="_blank">http://mfe-poc.rameshv.me:8082/</a></li>
+  </ul>
+  
   <p class="title">2) Demo of a Shared MFE application that contains</p>
   <ul class="list">
     <li>shared components (like <span class="highlight">AboutComponent</span>)</li>
@@ -68,7 +76,7 @@
     <p class="title">7) Deployment notes</p>
     <ul class="list">
     <li>All the 5 MFE applicaitons are deployed in their own <span class="highlight">docker container</span> on an ngnix werb server within the container itself and <span class="highlight">deplpyed together via a docker-compose.yml</span> </li>
-    <li ><span class="highlight">A single deploy script</span> to used deploy locally for dev & <span class="highlight">a shell script</span> to deploy for production via CI/CD is developed</li>
+    <li ><span class="highlight">A single deploy script <a href=</span> to used deploy locally for dev & <span class="highlight">a shell script</span> to deploy for production via CI/CD is developed</li>
     <li><span class="highlight">GitHub:</span> <a href="https://github.com/ramesh1972/examples/tree/master/micro-front-end/react_micro_frontend_demo">https://github.com/ramesh1972/examples/tree/master/micro-front-end/react_micro_frontend_demo</a></li>
     </ul>
 </div>

@@ -27,7 +27,7 @@ const Dashboard = () => {
   return (
     <div className='common-container'>
       <div className='common-style'>Dashboard MFE App</div>
-      <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', padding: '20px', minHeight: '180px' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', padding: '20px', minHeight: '180px', backgroundColor: 'white' }}>
         <span>Add Users in the User Management MFE Application Component and you will see the users listed here</span>
         <table style={{ width: '100%', borderCollapse: 'collapse'}} border={1}>
           <thead style={{ backgroundColor: 'darkgrey' }}>

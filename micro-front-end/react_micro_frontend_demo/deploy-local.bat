@@ -6,7 +6,8 @@ set APP1_DIR=shared-micro-front-end-app
 set APP2_DIR=userManagement
 set APP3_DIR=dashboard
 set APP4_DIR=footer
-set APP5_DIR=host
+set APP5_DIR=header
+set APP6_DIR=host
 
 :: Define the log file
 set LOG_FILE=build_and_run.log
@@ -17,7 +18,8 @@ call :build_and_run "%APP1_DIR%" shared-micro-front-end-app
 call :build_and_run "%APP2_DIR%" userManagement
 call :build_and_run "%APP3_DIR%" dashboard
 call :build_and_run "%APP4_DIR%" footer
-call :build_and_run "%APP5_DIR%" host
+call :build_and_run "%APP5_DIR%" header
+call :build_and_run "%APP6_DIR%" host
 
 :: End script
 echo All apps have been built and started. Logs are saved in %LOG_FILE%.

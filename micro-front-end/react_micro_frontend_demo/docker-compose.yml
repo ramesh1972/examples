@@ -27,7 +27,14 @@ services:
       context: ./footer
     container_name: footer
     ports:
-      - "8081:80" # Map port 8089 to the app's NGINX port
+      - "8081:80" # Map port 8081 to the app's NGINX port
+
+  header:
+    build:
+      context: ./header
+    container_name: header
+    ports:
+      - "8082:80" # Map port 8082 to the app's NGINX port
 
   host:
     build:
@@ -47,4 +54,5 @@ services:
       - usermanagement
       - dashboard
       - footer
+      - header
       - host
