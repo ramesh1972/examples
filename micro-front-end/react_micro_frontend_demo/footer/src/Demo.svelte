@@ -75,8 +75,9 @@
   </ul>
     <p class="title">7) Deployment notes</p>
     <ul class="list">
-    <li>All the 5 MFE applicaitons are deployed in their own <span class="highlight">docker container</span> on an ngnix werb server within the container itself and <span class="highlight">deplpyed together via a docker-compose.yml</span> </li>
-    <li ><span class="highlight">A single deploy script <a href=</span> to used deploy locally for dev & <span class="highlight">a shell script</span> to deploy for production via CI/CD is developed</li>
-    <li><span class="highlight">GitHub:</span> <a href="https://github.com/ramesh1972/examples/tree/master/micro-front-end/react_micro_frontend_demo">https://github.com/ramesh1972/examples/tree/master/micro-front-end/react_micro_frontend_demo</a></li>
+    <li>All the 6 MFE applicaitons are deployed in their own <span class="highlight">docker container</span> created by <a href="https://github.com/ramesh1972/examples/blob/master/micro-front-end/react_micro_frontend_demo/docker-compose.yml">deploy-compose.yml</a> on an ngnix web server hosted within the container itself</li>
+    <li><span class="highlight">A single deploy script</span> <a href="https://github.com/ramesh1972/examples/blob/master/micro-front-end/react_micro_frontend_demo/deploy-local.bat">deploy-local.bat</a> to used deploy locally for dev</li>
+    <li><span class="highlight">a shell script</span> found in <a href="https://github.com/ramesh1972/examples/blob/master/micro-front-end/react_micro_frontend_demo/deploy">deploy/</a> is used to deploy for production via CI/CD</li>
+    <li><span class="highlight">Project GitHub:</span> <a href="https://github.com/ramesh1972/examples/tree/master/micro-front-end/react_micro_frontend_demo">https://github.com/ramesh1972/examples/tree/master/micro-front-end/react_micro_frontend_demo</a></li>
     </ul>
 </div>
