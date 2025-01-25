@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { UserReducer } from './store/users.reducers';
 import { AddUser } from './store/user.actions';
 import { GlobalStore } from 'redux-micro-frontend';
+
 import('sharedMFE/commonStyles');
 
 const styles = {

@@ -6,22 +6,25 @@ import './App.css';
 
 import UserTile from './components/UserTile';
 import Migrate from './components/Migrate';
+import DemoNotes from './components/DemoNotes';
+import Footer from "./components/Footer";
+
 const AboutComponent = React.lazy(() => import('sharedMFE/AboutComponent'));
 const Dashboard = React.lazy(() => import('dashboard/Dashboard'));
 const UserManagement = React.lazy(() => import('userManagement/UserManagement'));
 const Header = React.lazy(() => import('header/Header'));
-import Footer from "./components/Footer";
+
 import('sharedMFE/commonStyles');
 
 const App = () => (
   <div className='common-container' style={{ backgroundColor: 'aqua' }}>
     <div className='common-style'>Host MFE App</div>
-     <Suspense fallback={<div>Loading Header...</div>} >
-     <div>
-      <Header/>
+    <Suspense fallback={<div>Loading Header...</div>} >
+      <div>
+        <Header />
       </div>
     </Suspense>
-    <div className="container">
+    <div className="container"> 
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
           <nav>
@@ -37,15 +40,22 @@ const App = () => (
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/image" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
-                  About
+                <NavLink to="/demo" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                  Demo Notes
                 </NavLink>
               </li>
+
               <li>
                 <NavLink to="/migrate" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
                   Migrating to MFE Arch
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                  About MFE Arch
+                </NavLink>
+              </li>
+
             </ul>
           </nav>
           <Routes>
@@ -70,8 +80,13 @@ const App = () => (
               path="/dash"
               element={<Dashboard />}
             />
+            
             <Route
-              path="/image"
+              path="/demo"
+              element={<DemoNotes />}
+            />
+            <Route
+              path="/about"
               element={<AboutComponent />}
             />
             <Route
@@ -83,8 +98,8 @@ const App = () => (
         </Suspense>
       </Router>
     </div>
-    <div style={{margin: '10px'}}>
-    <Footer />
+    <div style={{ marginTop: '10px' }}>
+      <Footer />
     </div>
   </div>
 );

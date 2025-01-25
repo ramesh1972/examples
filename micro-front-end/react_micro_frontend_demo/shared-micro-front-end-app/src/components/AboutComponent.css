@@ -48,6 +48,7 @@
 .image-component img {
   display: block;
   max-width: 100%;
+  width: 600px;
   height: auto;
   border: 2px solid black;
   border-radius: 20px;

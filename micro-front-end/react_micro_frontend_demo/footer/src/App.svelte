@@ -12,24 +12,27 @@
 
 </script>
 
-<div class="footer common-container">
-	<div class="common-style">Footer MFE App (Developed in Svelte)<br/><img src={`${baseURL}/assets/images/svelte.png`} alt="" class="svelte-logo"/><div>Demo Notes</div></div>
-	<Demo/>
+<div class="common-container">
+	<div class="common-style">Footer MFE App - Developed in Svelte&nbsp;<img src={`${baseURL}/assets/images/svelte.png`} alt="" class="svelte-logo"/></div>
+	<div class="footer">visit my personal website @&nbsp;<a href="https://rameshv.me/ramesh">rameshv.me</a></div>
 </div>
 <style>
 	.footer{
-		background-color: #ddd;
-		font-size: 18px;
+		background-color: white;
+		font-size: 14px;
 		font-weight: bold;
-		text-align: center;
+		text-align: right;
 		height:100%;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		padding:4px;
+		justify-content: right;
+		align-items: right;
+		margin-top:20px;
+
 	}
 	.svelte-logo{
-		width: 24px;
-		height: 24px;
+		width:13.5px;
+		height: 13.5px;
 	}
 
 </style>

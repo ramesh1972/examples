@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { GlobalStore } from 'redux-micro-frontend';
+
 import('sharedMFE/commonStyles');
 
 const Dashboard = () => {
@@ -26,8 +27,9 @@ const Dashboard = () => {
 
   return (
     <div className='common-container'>
-      <div className='common-style'>Dashboard MFE App</div>
-      <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', padding: '20px', minHeight: '180px', backgroundColor: 'white' }}>
+      <span className='common-style'>Dashboard MFE App</span>
+      
+      <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', padding: '20px', minHeight: '180px', backgroundColor: 'white', marginTop: '2px' }}>
         <span>Add Users in the User Management MFE Application Component and you will see the users listed here</span>
         <table style={{ width: '100%', borderCollapse: 'collapse'}} border={1}>
           <thead style={{ backgroundColor: 'darkgrey' }}>

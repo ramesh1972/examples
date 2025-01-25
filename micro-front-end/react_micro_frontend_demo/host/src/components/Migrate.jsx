@@ -6,7 +6,7 @@ const Migrate = () => {
   const baseURL = process.env.SHARED_MFE_URL || 'http://localhost:8083';
 
   return (
-    <div className="common-container">
+    <div className="common-container" style={{border: '3px dashed blue'}}>
       <div className="common-header">
         Host MFE Application's Migrate Component
       </div>
