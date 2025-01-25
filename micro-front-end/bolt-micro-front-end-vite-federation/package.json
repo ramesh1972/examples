@@ -1,0 +1,22 @@
+{
+  "name": "mfe-root",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:host\" \"npm run dev:dashboard\" \"npm run dev:products\"",
+    "dev:host": "npm run dev -w host",
+    "dev:dashboard": "npm run dev -w dashboard",
+    "dev:products": "npm run dev -w products",
+    "build": "npm run build -ws",
+    "preview": "npm run preview -ws"
+  },
+  "workspaces": [
+    "host",
+    "dashboard",
+    "products"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
