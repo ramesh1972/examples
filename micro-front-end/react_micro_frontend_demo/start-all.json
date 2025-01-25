@@ -1,0 +1,10 @@
+{
+    "apps": [
+        {
+            "name": "shared-micro-front-end-app",
+            "script": "npm",
+            "args": "run start",
+            "cwd": "./shared-micro-front-end-app"
+        }
+    ]
+}

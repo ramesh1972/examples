@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  shared-micro-front-end-app:
+    build: ./shared-micro-front-end-app
+    ports:
+      - "127.0.0.1:8083:8083" # Bind port 3000 to localhost
+    environment:
+      - NODE_ENV=development
+
+  dashboard:
+    build: ./dashboard
+    ports:
+      - "127.0.0.1:8089:8089" # Bind port 3000 to localhost
+    environment:
+      - NODE_ENV=development
+
+  usermanagement:
+    build: ./userManagement
+    ports:
+      - "127.0.0.1:8087:8087"
+    environment:
+      - NODE_ENV=development
+
+  host:
+    build: ./host
+    ports:
+      - "127.0.0.1:8085:8085"
+    environment:
+      - NODE_ENV=development

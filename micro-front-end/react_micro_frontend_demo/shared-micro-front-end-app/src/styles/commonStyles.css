@@ -1,0 +1,11 @@
+/* filepath: /d:/src/github-ramesh/examples/micro-front-end/react_micro_frontend_demo/shared-micro-front-end-app/src/styles/common.css */
+.common-style {
+  font-family: Arial, sans-serif;
+  color: black;
+  padding: 4px;
+  font-size: 16px;
+  text-align: center;
+  background-color: yellow;
+  border: 1px solid black;
+  border-radius: 4px;
+}
