@@ -1,4 +1,11 @@
+
 /* filepath: /d:/src/github-ramesh/examples/micro-front-end/react_micro_frontend_demo/shared-micro-front-end-app/src/styles/common.css */
+.common-container {
+  display: flex;
+  flex-direction: column;
+  border: 3px dashed black;   
+}
+
 .common-style {
   font-family: Arial, sans-serif;
   color: black;
@@ -6,6 +13,9 @@
   font-size: 16px;
   text-align: center;
   background-color: yellow;
-  border: 1px solid black;
-  border-radius: 4px;
+  border-bottom: 0px solid black;
+  box-shadow: 0px 2px 4px 0px  rgba(0, 0, 0, 0.6);
+  text-wrap: nowrap;
+  width: calc(100% - 9px);
 }
+

@@ -53,10 +53,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'file-loader',
-            options: {
-              name: 'assets/images/[name].[ext]', // Organizes images into a folder with hashed filenames
-            },
+            loader: 'file-loader'
           },
         ],
       },
@@ -88,7 +85,7 @@ module.exports = {
       patterns: [
         {
           from: 'public', // Source folder (where your images are stored)
-          to: 'assets/images', // Destination folder inside dist
+          to: '.', // Destination folder inside dist
           globOptions: {
             ignore: ['**/index.html'], // Ignore index.html if it's in public
           },

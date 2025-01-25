@@ -25,24 +25,27 @@ const Dashboard = () => {
   }, [globalStore]);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', border: '8px solid blue', padding: '20px', width: '60%', height: '100%' }}>
-      <span className='common-style'>Dashboard MFE App</span>
-      <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '16px' }} border={1}>
-        <thead style={{ backgroundColor: 'darkgrey' }}>
-          <tr>
-            <th style={{ border: '1px solid black', padding: '8px' }}>Name</th>
-            <th style={{ border: '1px solid black', padding: '8px' }}>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user) => (
-            <tr key={user.id}>
-              <td style={{ border: '1px solid black', padding: '8px' }}>{user.name}</td>
-              <td style={{ border: '1px solid black', padding: '8px' }}>{user.email}</td>
+    <div className='common-container'>
+      <div className='common-style'>Dashboard MFE App</div>
+      <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', padding: '20px', minHeight: '180px' }}>
+        <span>Add Users in the User Management MFE Application Component and you will see the users listed here</span>
+        <table style={{ width: '100%', borderCollapse: 'collapse'}} border={1}>
+          <thead style={{ backgroundColor: 'darkgrey' }}>
+            <tr>
+              <th style={{ border: '1px solid black', padding: '8px' }}>Name</th>
+              <th style={{ border: '1px solid black', padding: '8px' }}>Email</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {users.map((user) => (
+              <tr key={user.id}>
+                <td style={{ border: '1px solid black', padding: '8px' }}>{user.name}</td>
+                <td style={{ border: '1px solid black', padding: '8px' }}>{user.email}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

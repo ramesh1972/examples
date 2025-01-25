@@ -60,7 +60,7 @@ module.exports = {
           './UserManagement': './src/UserManagement'
         },
         remotes: {
-          sharedMFE: `sharedMFE@${env.SHARED_MFE_URL}/remoteEntry.js`,
+          sharedMFE: `sharedMFE@${env.SHARED_MFE_URL}remoteEntry.js`,
         },
         shared: {
           react: {

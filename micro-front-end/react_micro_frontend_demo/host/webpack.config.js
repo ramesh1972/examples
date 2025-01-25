@@ -64,6 +64,7 @@ module.exports = {
         dashboard: `dashboard@${env.DASHBOARD_URL}remoteEntry.js`,
         userManagement: `userManagement@${env.USER_MANAGEMENT_URL}remoteEntry.js`,
         sharedMFE: `sharedMFE@${env.SHARED_MFE_URL}remoteEntry.js`,
+        footer: `footer@${env.FOOTER_URL}remoteEntry.js`,
       },
       shared: {
         react: {

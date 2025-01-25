@@ -22,6 +22,13 @@ services:
     ports:
       - "8089:80" # Map port 8089 to the app's NGINX port
 
+  footer:
+    build:
+      context: ./footer
+    container_name: footer
+    ports:
+      - "8081:80" # Map port 8089 to the app's NGINX port
+
   host:
     build:
       context: ./host
@@ -39,4 +46,5 @@ services:
       - shared-micro-front-end-app
       - usermanagement
       - dashboard
+      - footer
       - host

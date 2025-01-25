@@ -6,8 +6,8 @@
   color: #333;
   padding: 20px;  
   text-align: left;
-  border: 8px solid aqua;
-  background-color: antiquewhite;
+  border: 3px dashed blue;
+  background-color: aqua;
 }
 
 .image-component h2 {

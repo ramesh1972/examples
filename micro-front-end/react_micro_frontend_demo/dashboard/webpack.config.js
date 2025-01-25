@@ -61,7 +61,7 @@ module.exports = {
         './Dashboard': './src/Dashboard', // Expose the App component
       },
       remotes: {
-        sharedMFE: `sharedMFE@${env.SHARED_MFE_URL}/remoteEntry.js`,
+        sharedMFE: `sharedMFE@${env.SHARED_MFE_URL}remoteEntry.js`,
       },
       shared: {
         react: {

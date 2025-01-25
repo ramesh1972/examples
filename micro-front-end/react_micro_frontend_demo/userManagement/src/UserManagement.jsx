@@ -78,31 +78,34 @@ const UserManagement = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', border: '8px solid lightblue', padding: '20px', width: '100%', height: '100%' }}>
+    <div className='common-container'>
       <span className='common-style'>User Management MFE App</span>
-      <span style={styles.labelStyle}>Add Users</span>
-      <div>
-        <input style={styles.inputStyle}
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input style={styles.inputStyle}
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button onClick={handleAddUser} style={styles.buttonStyle}>Add User</button>
+
+      <div style={{ display: 'flex', flexDirection: 'column', rowGap: '10px', padding: '20px', minHeight: '180px' }}>
+        <span style={styles.labelStyle}>Add Users</span>
+        <div>
+          <input style={styles.inputStyle}
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input style={styles.inputStyle}
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button onClick={handleAddUser} style={styles.buttonStyle}>Add User</button>
+        </div>
+        <ul style={styles.listStyle}>
+          {users.map((user) => (
+            <li key={user.id}><span style={styles.userStyle}>{user.name}</span> with email address <span style={styles.userStyle}>{user.email}</span> added</li>
+          ))}
+        </ul>
       </div>
-      <ul style={styles.listStyle}>
-        {users.map((user) => (
-          <li key={user.id}><span style={styles.userStyle}>{user.name}</span> with email address <span style={styles.userStyle}>{user.email}</span> added</li>
-        ))}
-      </ul>
     </div>
-  );
+      );
 };
 
-export default UserManagement;
+      export default UserManagement;

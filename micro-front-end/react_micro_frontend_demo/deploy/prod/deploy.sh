@@ -10,6 +10,22 @@ ENV=prod
 SRC_PATH=D:/src/github-ramesh/examples/micro-front-end/react_micro_frontend_demo/
 REMOTE_PATH=/var/www/html/mfe-poc/$ENV/react_micro_frontend_demo/
 
+# clean up local files
+rm -rf $SRC_PATH/shared-micro-front-end-app/node_modules
+rm -rf $SRC_PATH/shared-micro-front-end-app/dist
+
+rm -rf $SRC_PATH/dashboard/node_modules
+rm -rf $SRC_PATH/dashboard/dist
+
+rm -rf $SRC_PATH/userManagement/node_modules
+rm -rf $SRC_PATH/userManagement/dist
+
+rm -rf $SRC_PATH/footer/node_modules
+rm -rf $SRC_PATH/footer/dist
+
+rm -rf $SRC_PATH/host/node_modules
+rm -rf $SRC_PATH/host/dist
+
 # copy files
 . ./src-copy.sh $SRC_PATH
 
