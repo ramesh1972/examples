@@ -12,7 +12,7 @@ const Header = () => {
         The demo showcases 1 host mfe, 1 header mfe, 2 sub mfes and 1 shared mfe all in react and 1 footer mfc in svelte framework.
         Use the legend give below to understand the UI elements.
       </div>
-      <div style={{ display: 'flex', flexDirection: 'row', marginTop: '-10px', columnGap: '20px', padding: '10px', justifyContent: 'center', justifyItems: 'space-between' }}>
+      <div style={{ display: 'flex', flexDirection: 'row', columnGap: '20px', padding: '10px', justifyContent: 'center', justifyItems: 'space-between' }}>
 
         <div style={{ fontSize: '24px', fontWeight: 'bold', fontVariant: 'all-small-caps' }}>
           App Legend

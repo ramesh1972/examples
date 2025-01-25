@@ -4,19 +4,20 @@ import { BrowserRouter as Router, Route, Routes, Link, NavLink } from 'react-rou
 
 import './App.css';
 
-import UserTile from './UserTile';
+import UserTile from './components/UserTile';
+import Migrate from './components/Migrate';
 const AboutComponent = React.lazy(() => import('sharedMFE/AboutComponent'));
 const Dashboard = React.lazy(() => import('dashboard/Dashboard'));
 const UserManagement = React.lazy(() => import('userManagement/UserManagement'));
 const Header = React.lazy(() => import('header/Header'));
-import Footer from "./modules/Footer";
+import Footer from "./components/Footer";
 import('sharedMFE/commonStyles');
 
 const App = () => (
   <div className='common-container' style={{ backgroundColor: 'aqua' }}>
     <div className='common-style'>Host MFE App</div>
      <Suspense fallback={<div>Loading Header...</div>} >
-     <div style={{margin: '10px'}}>
+     <div>
       <Header/>
       </div>
     </Suspense>
@@ -38,6 +39,11 @@ const App = () => (
               <li>
                 <NavLink to="/image" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
                   About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/migrate" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>
+                  Migrating to MFE Arch
                 </NavLink>
               </li>
             </ul>
@@ -67,6 +73,10 @@ const App = () => (
             <Route
               path="/image"
               element={<AboutComponent />}
+            />
+            <Route
+              path="/migrate"
+              element={<Migrate />}
             />
           </Routes>
 
